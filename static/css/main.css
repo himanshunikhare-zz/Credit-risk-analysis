@@ -1,0 +1,35 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-navbar{
+    background-color: #172b4c;
+    padding: 10px;
+}
+.navbar-brand{
+    color: white;
+    font-size:xx-large;
+    font-weight: bold;
+}
+.navbar-brand:hover{
+    color: white;
+}
+.links-table {
+    border-collapse:separate; 
+    border-spacing: 1em;
+}
+.navbar-form-table{
+    border-collapse:separate; 
+    border-spacing: 1em; 
+}
+#searchbar{
+    border-radius: 25px;
+    padding: 10px;
+    margin-bottom: 1em;
+}
+.align-top{
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    /* border: 3px solid green; */
+}
