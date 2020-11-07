@@ -3,11 +3,11 @@ body{
 }
 
 .custom-navbar{
-    background-color: #172b4c;
+    background-color: #15376d !important;
     padding: 10px;
 }
 .navbar-brand{
-    color: white;
+    color: white !important;
     font-size:xx-large;
     font-weight: bold;
 }
@@ -18,18 +18,81 @@ body{
     border-collapse:separate; 
     border-spacing: 1em;
 }
+.links-table-text{
+    font-size: large;
+    text-decoration: none !important;
+    color: rgb(162, 188, 236);
+}
+.links-table-text:hover{
+    font-size: large;
+    color: rgb(252, 252, 252);
+}
 .navbar-form-table{
     border-collapse:separate; 
     border-spacing: 1em; 
 }
+.nav-list{
+    list-style: none;
+    margin-left: 300px;
+}
 #searchbar{
     border-radius: 25px;
-    padding: 10px;
-    margin-bottom: 1em;
+    padding: 13px 50px;
 }
+.search-icon{
+    font-size: x-large;
+    margin: 5px;
+    color: white;
+}
+
 .align-top{
     position: absolute;
     top: 20px;
-    right: 100px;
+    right: 300px;
     /* border: 3px solid green; */
+}
+.nav-link{
+    font-size: x-large;
+    font-weight: bold;
+    color: white !important;
+}
+/* Side Navbar */
+/* @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+.sidenav {
+    height: 100%;
+    width: 70px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    padding-top: 20px;
+    box-shadow: 2px 0px 10px rgb(0, 0, 0);
+} 
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+} 
+.sidenav a:hover {
+    color: #f1f1f1;
+} */
+
+/* Index.html */
+.form-card{
+    background-color: rgba(232, 232, 232, 0.172);
+    box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.487);
+}
+.form-head>div>h3{
+    font-size: x-large;
+    font-weight: bold;
+}
+hr{
+    background-color: #15376d;
 }

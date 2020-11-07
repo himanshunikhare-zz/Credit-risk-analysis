@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> HOME </title>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+{% endblock %}
+
+{% block body %}
+
+<div class="container p-5 my-5 form-card">
+    <div class="row justify-content-between form-head">
+        <div class="col-4">
+            <h3>Other Details</h3>
+        </div>
+        <button type="button" class="btn btn-light">Reset</button>
+    </div>
+    <hr>
+    <form>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-label col-sm-5" for="email">Loan Annuity</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="name" placeholder="Jatin Jain">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <label class="control-label col-sm-6" for="email">Is Loan given for price of good?</label>
+                <br>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary p-3 m-3">Yes</button>
+                    <button type="button" class="btn btn-primary p-3 m-3">No</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="email">Who was accompanying client while applying for
+                        loan:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control col-6" id="dob" placeholder="someone">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+                <label class="control-label col-sm-6" for="email">Do you own your house?</label>
+                <br>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary p-3 m-3">Yes</button>
+                    <button type="button" class="btn btn-primary p-3 m-3">No</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+                <label class="control-label col-sm-6" for="email">Do you own a car?</label>
+                <br>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary p-3 m-3">Yes</button>
+                    <button type="button" class="btn btn-primary p-3 m-3">No</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-label col-sm-5" for="email">Age of Car</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="name" placeholder="2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <label class="control-label col-sm-6" for="email">Mobile number provided?</label>
+                <br>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary p-3 m-3">Yes</button>
+                    <button type="button" class="btn btn-primary p-3 m-3">No</button>
+                </div>
+            </div>
+            <div class="col">
+                <label class="control-label col-sm-6" for="email">Was your mobile number reachable?</label>
+                <br>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary p-3 m-3">Yes</button>
+                    <button type="button" class="btn btn-primary p-3 m-3">No</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="control-label col-sm-6" for="email">Work phone number provided?</label>
+                <br>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary p-3 m-3">Yes</button>
+                    <button type="button" class="btn btn-primary p-3 m-3">No</button>
+                </div>
+            </div>
+            <div class="col">
+                <label class="control-label col-sm-6" for="email">Home phone number reachable?</label>
+                <br>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary p-3 m-3">Yes</button>
+                    <button type="button" class="btn btn-primary p-3 m-3">No</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="control-label col-sm-6" for="email">Email provided?</label>
+                <br>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary p-3 m-3">Yes</button>
+                    <button type="button" class="btn btn-primary p-3 m-3">No</button>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+
+        <div class="p-4">
+            <h3>Terms and conditions</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, obcaecati repellat sed vitae nostrum illo
+                reprehenderit consectetur labore! Illum velit pariatur quod dolorum nisi cumque deserunt tempora id
+                repellendus in!</p>
+        </div>
+        <input type="checkbox" name="accept-terms" id="accept-terms"><label for="accept-terms">Accept Terms and Conditions</label>
+        <br>
+        <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+    </form>
+
+</div>
+
+
+
+
+{% endblock %}

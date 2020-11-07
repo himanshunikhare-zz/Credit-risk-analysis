@@ -2,10 +2,160 @@
 
 {% block head %}
 <title> HOME </title>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 {% endblock %}
 
 {% block body %}
-<h1>HOME Page</h1>
-<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-<div style="height: 200vh; background-color: aqua;">s</div>
+
+<div class="container p-5 my-5 form-card">
+    <div class="row justify-content-between form-head">
+        <div class="col-4">
+            <h3>Personal Details</h3>
+        </div>
+        <button type="button" class="btn btn-light">Reset</button>
+    </div>
+    <hr>
+    <form>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-label col-sm-5" for="email">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" placeholder="Jatin Jain">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label class="control-label col-sm-5" for="email">Gender</label>
+                <br>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary p-3 m-3">Yes</button>
+                    <button type="button" class="btn btn-secondary p-3 m-3">No</button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="email">Date of Birth:</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="dob" placeholder="DOB">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="email">Family Status:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="dob" placeholder="Rich">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="range-slider">
+                    <label class="control-label col-sm-6" for="email">Number of Familty Members:</label>
+
+                    <input class="range-slider__range" type="range" value="100" min="0" max="500">
+                    <span class="range-slider__value">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-label col-sm-6" for="email">Highest Level of Education:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="dob" placeholder="Education">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="range-slider">
+                    <label class="control-label col-sm-6" for="email">Number of Children:</label>
+
+                    <input class="range-slider__range" type="range" value="100" min="0" max="500">
+                    <span class="range-slider__value">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-label col-sm-5" for="email">Income Type:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" placeholder="Jatin Jain">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Annaul Income:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="email" placeholder="Enter email">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-label col-sm-5" for="email">Kind of Occupation</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" placeholder="Jatin Jain">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Housing Situation:</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-label col-sm-6" for="email">Employed Since:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="dob" placeholder="Education">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="range-slider">
+                    <label class="control-label col-sm-6" for="email">Rating of house:</label>
+
+                    <input class="range-slider__range" type="range" value="100" min="0" max="500">
+                    <span class="range-slider__value">0</span>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" value="Submit">Next</button>
+    </form>
+
+</div>
+
+
+
+
 {% endblock %}

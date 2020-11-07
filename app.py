@@ -11,5 +11,9 @@ db =SQLAlchemy(app)
 def index():
     return render_template('index.html')
 
+@app.route('/other-details')
+def otherdetails():
+    return render_template('form2.html')
+
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
