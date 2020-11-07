@@ -15,5 +15,9 @@ def index():
 def otherdetails():
     return render_template('form2.html')
 
+@app.route('/result')
+def results():
+    return render_template('result.html')
+
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
