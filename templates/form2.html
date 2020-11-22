@@ -24,7 +24,7 @@
                 <div class="form-group">
                     <label class="control-label col-sm-5" for="email">Loan Annuity</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="name" placeholder="Jatin Jain">
+                        <input type="number" class="form-control" id="name" placeholder="2">
                     </div>
                 </div>
             </div>
@@ -139,7 +139,7 @@
         </div>
         <input type="checkbox" name="accept-terms" id="accept-terms"><label for="accept-terms">Accept Terms and Conditions</label>
         <br>
-        <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+        <a href="{{ url_for('results') }}" ><button type="submit" class="btn btn-primary" value="Submit">Submit</button></a>
     </form>
 
 </div>
