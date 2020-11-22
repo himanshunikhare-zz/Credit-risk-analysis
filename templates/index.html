@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title> HOME </title>
+<title> Home </title>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -18,7 +18,7 @@
         <button type="button" class="btn btn-light">Reset</button>
     </div>
     <hr>
-    <form>
+    <form action="/" method="POST">
         <div class="row">
             <div class="col">
                 <div class="form-group">
@@ -43,8 +43,8 @@
                 <label class="control-label col-sm-5" for="email">Gender</label>
                 <br>
                 <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary p-3 m-3">Yes</button>
-                    <button type="button" class="btn btn-secondary p-3 m-3">No</button>
+                    <button type="button" class="btn btn-secondary p-3 m-3">Male</button>
+                    <button type="button" class="btn btn-secondary p-3 m-3">Female</button>
                 </div>
             </div>
 
@@ -70,7 +70,7 @@
                 <div class="range-slider">
                     <label class="control-label col-sm-6" for="email">Number of Familty Members:</label>
 
-                    <input class="range-slider__range" type="range" value="100" min="0" max="500">
+                    <input class="range-slider__range" type="range" value="8" min="0" max="20">
                     <span class="range-slider__value">0</span>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                 <div class="range-slider">
                     <label class="control-label col-sm-6" for="email">Number of Children:</label>
 
-                    <input class="range-slider__range" type="range" value="100" min="0" max="500">
+                    <input class="range-slider__range" type="range" value="4" min="0" max="10">
                     <span class="range-slider__value">0</span>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                 <div class="form-group">
                     <label class="control-label col-sm-5" for="email">Income Type:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="name" placeholder="Jatin Jain">
+                        <input type="text" class="form-control" id="name" placeholder="type">
                     </div>
                 </div>
             </div>
