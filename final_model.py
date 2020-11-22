@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import pickle
-
+from sklearn.preprocessing import LabelEncoder
 
 data=pd.read_csv('application_train.csv')
 for column in data.columns:
@@ -12,6 +12,20 @@ remove_class=['SK_ID_CURR', 'FLAG_OWN_CAR', 'FLAG_MOBIL', 'FLAG_CONT_MOBILE', 'F
 data.keys()
 data.drop(labels=remove_class, axis=1, inplace=True)
 
+le = LabelEncoder()
+
+for col in data:
+    if data[col].dtype == 'object':
+        if len(list(data[col].unique())) <= 2:
+            le.fit(data[col])
+            data[col] = le.transform(data[col])
+print("Label Encoder ",data.shape)
+data = pd.get_dummies(data)
+print("One hot encoder ",data.shape)
+
+Y=data.iloc[:,0]
+X=data.iloc[:,2:]
+
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=0)
 
@@ -20,7 +34,6 @@ decisiontree_model = tree.DecisionTreeClassifier(min_samples_split=10,min_sample
 decisiontree_model.fit(X_train,y_train)
 
 
-pickle.dump(regressor, open('model.pkl','wb'))
+pickle.dump(decisiontree_model, open('model.pkl','wb'))
 
 model = pickle.load(open('model.pkl','rb'))
-print(model.predict([[4, 300, 500]]))
