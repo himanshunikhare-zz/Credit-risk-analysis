@@ -19,7 +19,8 @@ body{
     border-spacing: 1em;
 }
 .links-table-text{
-    font-size: large;
+    ont-size: large;
+    
     text-decoration: none !important;
     color: rgb(162, 188, 236);
 }
