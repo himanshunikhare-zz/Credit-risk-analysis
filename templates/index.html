@@ -6,6 +6,11 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<script>
+    function outputUpdate(age) {
+        document.querySelector('#selected-age').value = age;
+    }
+</script>
 {% endblock %}
 
 {% block body %}
@@ -18,156 +23,35 @@
         <button type="button" class="btn btn-light">Reset</button>
     </div>
     <hr>
-    <form action="/" method="POST">
-        <div class="row">
-            <div class="col">
+    <form class="form-horizontal" action="/" method="POST">
+        <!-- <input type="range" min="0" max="100" name="name_of_slider" /> -->
+        <div class="row p-4">
+
+            {% for i in form %}
+
+            {% if i.type== 'DecimalRangeField' %}
+            <div class="col-sm-6 p-2">
                 <div class="form-group">
-                    <label class="control-label col-sm-5" for="email">Name</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="name" placeholder="Jatin Jain">
-                    </div>
+                    {{ form.age.label }} <br>
+                    {{ form.age(min=0, max=10,step="1", oninput="outputUpdate(value)") }}
+                    <output for="age" id="selected-age">{{ form.age.data }}</output>
+                </div>
+            </div> {% else %}
+            <div class="col-sm-6 p-2">
+                <div class="form-group">
+                    {{ i.label }} <br>{{ i }}
                 </div>
             </div>
-            <div class="col">
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Email:</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" placeholder="Enter email">
-                    </div>
-                </div>
-            </div>
+            {% endif %}
+
+            {% endfor %}
         </div>
 
-        <div class="row">
-            <div class="col">
-                <label class="control-label col-sm-5" for="email">Gender</label>
-                <br>
-                <div class="btn-group" role="group" aria-label="Basic example">
-<<<<<<< HEAD
-                    <button type="button" class="btn btn-secondary p-3 m-3">Male</button>
-                    <button type="button" class="btn btn-secondary p-3 m-3">Female</button>
-=======
-                    <button type="button" class="btn btn-secondary p-3 m-3">MALE</button>
-                    <button type="button" class="btn btn-secondary p-3 m-3">FEMALE</button>
->>>>>>> 64ec19d13293023d54f563eb7f9ed766318fd2c3
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="form-group">
-                    <label class="control-label col-sm-4" for="email">Date of Birth:</label>
-                    <div class="col-sm-10">
-                        <input type="date" class="form-control" id="dob" placeholder="DOB">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label class="control-label col-sm-4" for="email">Family Status:</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="dob" placeholder="Status">
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="range-slider">
-                    <label class="control-label col-sm-6" for="email">Number of Familty Members:</label>
-
-<<<<<<< HEAD
-                    <input class="range-slider__range" type="range" value="8" min="0" max="20">
-=======
-                    <input class="range-slider__range" type="range" value="5" min="0" max="20">
->>>>>>> 64ec19d13293023d54f563eb7f9ed766318fd2c3
-                    <span class="range-slider__value">0</span>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label class="control-label col-sm-6" for="email">Highest Level of Education:</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="dob" placeholder="Education">
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="range-slider">
-                    <label class="control-label col-sm-6" for="email">Number of Children:</label>
-
-<<<<<<< HEAD
-                    <input class="range-slider__range" type="range" value="4" min="0" max="10">
-=======
-                    <input class="range-slider__range" type="range" value="2" min="0" max="10">
->>>>>>> 64ec19d13293023d54f563eb7f9ed766318fd2c3
-                    <span class="range-slider__value">0</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label class="control-label col-sm-5" for="email">Income Type:</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="name" placeholder="type">
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Annaul Income:</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="email" placeholder="Enter email">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label class="control-label col-sm-5" for="email">Kind of Occupation</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="name" placeholder="Jatin Jain">
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Housing Situation:</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" placeholder="Enter email">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label class="control-label col-sm-6" for="email">Employed Since:</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="dob" placeholder="Education">
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="range-slider">
-                    <label class="control-label col-sm-6" for="email">Rating of house:</label>
-
-                    <input class="range-slider__range" type="range" value="70" min="0" max="100">
-                    <span class="range-slider__value">0</span>
-                </div>
-            </div>
-        </div>
-        <a href= "{{ url_for('otherdetails') }}" ><button type="submit" class="btn btn-primary" value="Submit">Next</button></a>
+        <hr>
+        <a href="{{ url_for('otherdetails') }}"><button type="submit" class="btn btn-primary"
+                value="Submit">Next</button></a>
     </form>
-
 </div>
-
 
 
 

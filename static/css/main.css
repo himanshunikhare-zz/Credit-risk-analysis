@@ -4,7 +4,7 @@ body{
 
 .custom-navbar{
     background-color: #15376d !important;
-    padding: 10px;
+    /* padding: 10px; */
 }
 .navbar-brand{
     color: white !important;
@@ -19,7 +19,7 @@ body{
     border-spacing: 1em;
 }
 .links-table-text{
-    ont-size: large;
+    font-size: large;
     
     text-decoration: none !important;
     color: rgb(162, 188, 236);
@@ -164,4 +164,7 @@ hr{
     .grid {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
+  ul{
+    list-style-type:none;
   }
