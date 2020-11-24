@@ -1,23 +1,19 @@
 {% extends 'base.html' %}
-
+{% set v_global = [] %}
 {% block head %}
 <title> Home </title>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-<script>
-    function outputUpdate(age) {
-        document.querySelector('#selected-age').value = age;
-    }
-</script>
+
 {% endblock %}
 
 {% block body %}
 
 <div class="container p-5 my-5 form-card">
-    
-    <form class="form-horizontal" action="/" method="POST"  autocomplete="on">
+
+    <form class="form-horizontal" action="/" method="POST" autocomplete="on">
         <div class="row justify-content-between form-head">
             <div class="col-4">
                 <h3>Personal Details</h3>
@@ -29,22 +25,11 @@
         <div class="row p-4">
 
             {% for i in form %}
-
-            {% if i.type== 'DecimalRangeField' %}
-            <div class="col-sm-6 p-2">
-                <div class="form-group">
-                    {{ form.age.label }} <br>
-                    {{ form.age(min=0, max=10,step="1", oninput="outputUpdate(value)") }}
-                    <output for="age" id="selected-age">{{ form.age.data }}</output>
-                </div>
-            </div> {% else %}
             <div class="col-sm-6 p-2">
                 <div class="form-group">
                     {{ i.label }} <br>{{ i }}
                 </div>
             </div>
-            {% endif %}
-
             {% endfor %}
         </div>
 

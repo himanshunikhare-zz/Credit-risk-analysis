@@ -47,8 +47,14 @@ class UserForm(Form):
             formElement = 'SelectField("%s",validators=[validators.required()],choices=[%s])' %(var[0],choiceStr)
 
         else:
-            age = DecimalRangeField('Age',default=0)
-            pass
+            choiceStr=''
+            choice = list(data[i][1:].dropna().unique().tolist())
+            for k in range(int(choice[0]),int(choice[1])+1):
+                k = str(k)
+                choiceStr +="('"+k+"','"+k+"')," 
+            # print(choiceStr)
+            formElement = 'SelectField("%s",validators=[validators.required()],choices=[%s])' %(var[0],choiceStr)
+            
         exec("%s=%s" % (var[1],formElement))
 
 @app.route('/', methods=['GET', 'POST'])
