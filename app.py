@@ -16,30 +16,40 @@ app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
 class UserForm(Form):
     for i in data:
         # print(data[i])
+        var = i.split('/')
+        # print(var) 
+        print(var[1])
         if data[i][0] == 'textbox':
-            exec("%s=%s" % (i,'TextField(i,validators=[validators.required()], default="please add content")'))
+            formElement='TextField("%s",validators=[validators.required()], default="please add content")' %(var[0])
+
         elif data[i][0] == 'radio':
             choice = list(data[i][1:].dropna().unique().tolist())
-            # choice.remove('X')
             choiceStr=''
             for k in choice:
-                choiceStr +="('"+k+"','"+k+"')," 
-            print(choiceStr)
-            exec("%s=%s" % (i,'RadioField(i,validators=[validators.required()],choices=[%s], default="%s")' %(choiceStr, choice[0])))
+                ch = k.split('/')
+                if len(ch)>1:
+                    choiceStr +="('"+ch[1]+"','"+ch[0]+"')," 
+                else:
+                    choiceStr +="('"+k+"','"+k+"'),"
+            formElement = 'RadioField("%s",validators=[validators.required()],choices=[%s], default="%s")' %(var[0],choiceStr, choice[0])
 
-            pass
         elif data[i][0] == 'dropdown':
             choice = list(data[i][1:].dropna().unique().tolist())
             # choice.remove('X')
             choiceStr=''
             for k in choice:
-                choiceStr +="('"+k+"','"+k+"')," 
-            print(choiceStr)
-            exec("%s=%s" % (i,'SelectField(i,validators=[validators.required()],choices=[%s])' %(choiceStr)))
-            pass
+                ch = k.split('/')
+                if len(ch)>1:
+                    choiceStr +="('"+ch[1]+"','"+ch[0]+"')," 
+                else:
+                    choiceStr +="('"+k+"','"+k+"')," 
+            # print(choiceStr)
+            formElement = 'SelectField("%s",validators=[validators.required()],choices=[%s])' %(var[0],choiceStr)
+
         else:
             age = DecimalRangeField('Age',default=0)
             pass
+        exec("%s=%s" % (var[1],formElement))
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
