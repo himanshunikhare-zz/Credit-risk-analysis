@@ -15,9 +15,9 @@ app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
 
 class UserForm(Form):
     for i in data:
-        print(data[i])
+        # print(data[i])
         if data[i][0] == 'textbox':
-            exec("%s=%s" % (i,'TextField(i,validators=[validators.required()])'))
+            exec("%s=%s" % (i,'TextField(i,validators=[validators.required()], default="please add content")'))
         elif data[i][0] == 'radio':
             choice = list(data[i][1:].dropna().unique().tolist())
             # choice.remove('X')
@@ -25,7 +25,7 @@ class UserForm(Form):
             for k in choice:
                 choiceStr +="('"+k+"','"+k+"')," 
             print(choiceStr)
-            exec("%s=%s" % (i,'RadioField(i,validators=[validators.required()],choices=[%s])' %(choiceStr)))
+            exec("%s=%s" % (i,'RadioField(i,validators=[validators.required()],choices=[%s], default="%s")' %(choiceStr, choice[0])))
 
             pass
         elif data[i][0] == 'dropdown':
@@ -47,14 +47,16 @@ def index():
 
     print(form.errors)
     if request.method == 'POST':
-        # name=request.form['name']
-        # print(name)
+        formData = {}
+        for i in request.form:
+            formData[i] = request.form[i]
+        print(formData)
         pass
 
     if form.validate():
         # Save the comment here.
-        pass
-        # flash('Hello ' + name)
+        flash('Succesfully submitted')
+        return render_template('result.html')
     else:
         flash('All the form fields are required. ')
     #if request.method == 'POST':
