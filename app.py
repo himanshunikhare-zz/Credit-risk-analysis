@@ -38,10 +38,6 @@ class UserForm(Form):
             # choice.remove('X')
             choiceStr=''
             for k in choice:
-                ch = k.split('/')
-                if len(ch)>1:
-                    choiceStr +="('"+ch[1]+"','"+ch[0]+"')," 
-                else:
                     choiceStr +="('"+k+"','"+k+"')," 
             # print(choiceStr)
             formElement = 'SelectField("%s",validators=[validators.required()],choices=[%s])' %(var[0],choiceStr)
