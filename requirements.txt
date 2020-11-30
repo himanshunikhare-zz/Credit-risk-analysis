@@ -1,6 +1,6 @@
 flask
 flask-sqlalchemy
-numpy
+numpy==1.19.4
 pandas
 scikit-learn
 flask-wtf
