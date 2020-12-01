@@ -14,8 +14,9 @@ WORKDIR /app
 RUN pip install --upgrade pip \
     pip install -r requirements.txt 
 RUN chmod +x geckodriver
-EXPOSE 127.0.0.1:5000 
+EXPOSE 5000 
 
 # Unit tests
+
 ENTRYPOINT [ "python" ] 
-CMD [ "tests/tests.py" ] 
+CMD [ "app.py" ] 

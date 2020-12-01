@@ -11,8 +11,8 @@ class TestSelenium(unittest.TestCase):
     def setUp(self): 
         self.data = pd.read_csv('formID.csv')
         self.data = self.data.set_index("labelName").T
-        self.driver = webdriver.Firefox(executable_path="./geckodriver") 
-        self.driver.get("http://127.0.0.1:5000/") 
+        self.driver = webdriver.Firefox()
+        self.driver.get("http://0.0.0.0:5000/") 
 
     def test_selenium(self):		 
 
