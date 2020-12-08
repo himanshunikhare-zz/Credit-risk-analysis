@@ -1,44 +1,53 @@
-{% extends 'base.html' %}
-{% set v_global = [] %}
-{% block head %}
-<title> Home </title>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+{% extends "bootstrap/base.html" %}
 
+{% block title %}
+Credit Risk Analysis 
 {% endblock %}
 
-{% block body %}
-
-<div class="container p-5 my-5 form-card">
-
-    <form class="form-horizontal" action="/" method="POST" autocomplete="on">
-        <div class="row justify-content-between form-head">
-            <div class="col-4">
-                <h3>Personal Details</h3>
-            </div>
-            <button type="reset" class="btn btn-light">Reset</button>
-        </div>
-        <hr>
-        <!-- <input type="range" min="0" max="100" name="name_of_slider" /> -->
-        <div class="row p-4">
-
-            {% for i in form %}
-            <div class="col-sm-6 p-2">
-                <div class="form-group">
-                    {{ i.label }} <br>{{ i }}
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-
-        <hr>
-        <a href="{{ url_for('otherdetails') }}"><button type="submit" class="btn btn-primary"
-                value="Submit">Submit</button></a>
-    </form>
-</div>
-
-
-
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='starter-template.css')}}">
 {% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Credit Risk Analysis</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="{{ url_for('about') }}">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Credit Risk Analysis</h1>
+        <p class="lead"><br>Make your dreams come true the right way</p>
+        <a href="{{ url_for('login') }}">
+          <button class="button" style="width:120px; height:34px ;background-color:rgb(0, 162, 255); color:white">
+            Log In
+          </button>
+        </a>
+        <a href="{{ url_for('signup') }}">
+          <button class="button" style="width:120px; height:34px ;background-color:rgb(0, 162, 255);  color:white">
+            Sign Up
+          </button>
+        </a>
+      
+      </div>
+
+    </div><!-- /.container -->
+{% endblock %}
+
