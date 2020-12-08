@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% set v_global = [] %}
+{% block head %}
+
+
+
+<title> Home </title>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+{% endblock %}
+
+{% block body %}
+
+
+<div class="container p-5 my-5 form-card">
+
+    <form class="form-horizontal" action="/" method="POST" autocomplete="on">
+        <div class="row justify-content-between form-head">
+            <div class="col-4">
+                <h3>Personal Details</h3>
+            </div>
+            <button type="reset" class="btn btn-light">Reset</button>
+        </div>
+        <hr>
+        <!-- <input type="range" min="0" max="100" name="name_of_slider" /> -->
+        <div class="row p-4">
+
+            {% for i in form %}
+            <div class="col-sm-6 p-2">
+                <div class="form-group">
+                    {{ i.label }} <br>{{ i }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+        <a href="{{ url_for('otherdetails') }}"><button type="submit" class="btn btn-primary"
+                value="Submit">Submit</button></a>
+    </form>
+</div>
+
+
+
+{% endblock %}
