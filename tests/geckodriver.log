@@ -677,3 +677,110 @@ JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.m
 
 (/usr/lib/firefox/firefox:25856): Gtk-WARNING **: 22:20:11.299: Theme parsing error: gtk.css:2:33: Failed to import: Error opening file /home/vagrantcoder/.config/gtk-3.0/window_decorations.css: No such file or directory
 1607532614093	Marionette	INFO	Stopped listening on port 40963
+1607538224016	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.8sOZ5UXBA5rA"
+
+(firefox:41203): Gtk-WARNING **: 23:53:44.278: Theme parsing error: gtk.css:2:33: Failed to import: Error opening file /home/vagrantcoder/.config/gtk-3.0/window_decorations.css: No such file or directory
+
+(/usr/lib/firefox/firefox:41358): Gtk-WARNING **: 23:53:46.942: Theme parsing error: gtk.css:2:33: Failed to import: Error opening file /home/vagrantcoder/.config/gtk-3.0/window_decorations.css: No such file or directory
+
+(/usr/lib/firefox/firefox:41379): Gtk-WARNING **: 23:53:47.107: Theme parsing error: gtk.css:2:33: Failed to import: Error opening file /home/vagrantcoder/.config/gtk-3.0/window_decorations.css: No such file or directory
+
+(/usr/lib/firefox/firefox:41358): Gtk-WARNING **: 23:53:47.110: Theme parsing error: gtk.css:68:35: The style property GtkButton:child-displacement-x is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:41358): Gtk-WARNING **: 23:53:47.110: Theme parsing error: gtk.css:69:35: The style property GtkButton:child-displacement-y is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:41358): Gtk-WARNING **: 23:53:47.110: Theme parsing error: gtk.css:71:36: The style property GtkCheckMenuItem:indicator-size is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:41358): Gtk-WARNING **: 23:53:47.111: Theme parsing error: gtk.css:76:30: The style property GtkExpander:expander-size is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:41379): Gtk-WARNING **: 23:53:47.353: Theme parsing error: gtk.css:68:35: The style property GtkButton:child-displacement-x is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:41379): Gtk-WARNING **: 23:53:47.353: Theme parsing error: gtk.css:69:35: The style property GtkButton:child-displacement-y is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:41379): Gtk-WARNING **: 23:53:47.353: Theme parsing error: gtk.css:71:36: The style property GtkCheckMenuItem:indicator-size is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:41379): Gtk-WARNING **: 23:53:47.353: Theme parsing error: gtk.css:76:30: The style property GtkExpander:expander-size is deprecated and shouldn't be used anymore. It will be removed in a future version
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+(firefox:41203): GLib-GIO-WARNING **: 23:53:47.578: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+
+(/usr/lib/firefox/firefox:41459): Gtk-WARNING **: 23:53:48.930: Theme parsing error: gtk.css:2:33: Failed to import: Error opening file /home/vagrantcoder/.config/gtk-3.0/window_decorations.css: No such file or directory
+1607538229043	Marionette	INFO	Listening on port 40295
+1607538229148	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+1607538244881	Marionette	INFO	Stopped listening on port 40295
+1607538299368	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.OeoYyDsCTEAl"
+
+(firefox:41702): Gtk-WARNING **: 23:54:59.476: Theme parsing error: gtk.css:2:33: Failed to import: Error opening file /home/vagrantcoder/.config/gtk-3.0/window_decorations.css: No such file or directory
+
+(/usr/lib/firefox/firefox:41812): Gtk-WARNING **: 23:55:00.171: Theme parsing error: gtk.css:2:33: Failed to import: Error opening file /home/vagrantcoder/.config/gtk-3.0/window_decorations.css: No such file or directory
+
+(/usr/lib/firefox/firefox:41821): Gtk-WARNING **: 23:55:00.309: Theme parsing error: gtk.css:2:33: Failed to import: Error opening file /home/vagrantcoder/.config/gtk-3.0/window_decorations.css: No such file or directory
+
+(/usr/lib/firefox/firefox:41812): Gtk-WARNING **: 23:55:00.437: Theme parsing error: gtk.css:68:35: The style property GtkButton:child-displacement-x is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:41812): Gtk-WARNING **: 23:55:00.437: Theme parsing error: gtk.css:69:35: The style property GtkButton:child-displacement-y is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:41812): Gtk-WARNING **: 23:55:00.437: Theme parsing error: gtk.css:71:36: The style property GtkCheckMenuItem:indicator-size is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:41812): Gtk-WARNING **: 23:55:00.437: Theme parsing error: gtk.css:76:30: The style property GtkExpander:expander-size is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(firefox:41702): GLib-GIO-WARNING **: 23:55:00.445: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+(/usr/lib/firefox/firefox:41821): Gtk-WARNING **: 23:55:00.632: Theme parsing error: gtk.css:68:35: The style property GtkButton:child-displacement-x is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:41821): Gtk-WARNING **: 23:55:00.633: Theme parsing error: gtk.css:69:35: The style property GtkButton:child-displacement-y is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:41821): Gtk-WARNING **: 23:55:00.633: Theme parsing error: gtk.css:71:36: The style property GtkCheckMenuItem:indicator-size is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:41821): Gtk-WARNING **: 23:55:00.633: Theme parsing error: gtk.css:76:30: The style property GtkExpander:expander-size is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:41916): Gtk-WARNING **: 23:55:01.772: Theme parsing error: gtk.css:2:33: Failed to import: Error opening file /home/vagrantcoder/.config/gtk-3.0/window_decorations.css: No such file or directory
+1607538301834	Marionette	INFO	Listening on port 33685
+1607538301902	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+1607538393665	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.exfnMmBsUQ4u"
+
+(firefox:42204): Gtk-WARNING **: 23:56:33.772: Theme parsing error: gtk.css:2:33: Failed to import: Error opening file /home/vagrantcoder/.config/gtk-3.0/window_decorations.css: No such file or directory
+
+(/usr/lib/firefox/firefox:42315): Gtk-WARNING **: 23:56:34.535: Theme parsing error: gtk.css:2:33: Failed to import: Error opening file /home/vagrantcoder/.config/gtk-3.0/window_decorations.css: No such file or directory
+
+(/usr/lib/firefox/firefox:42324): Gtk-WARNING **: 23:56:34.675: Theme parsing error: gtk.css:2:33: Failed to import: Error opening file /home/vagrantcoder/.config/gtk-3.0/window_decorations.css: No such file or directory
+
+(/usr/lib/firefox/firefox:42315): Gtk-WARNING **: 23:56:34.681: Theme parsing error: gtk.css:68:35: The style property GtkButton:child-displacement-x is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:42315): Gtk-WARNING **: 23:56:34.681: Theme parsing error: gtk.css:69:35: The style property GtkButton:child-displacement-y is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:42315): Gtk-WARNING **: 23:56:34.681: Theme parsing error: gtk.css:71:36: The style property GtkCheckMenuItem:indicator-size is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:42315): Gtk-WARNING **: 23:56:34.681: Theme parsing error: gtk.css:76:30: The style property GtkExpander:expander-size is deprecated and shouldn't be used anymore. It will be removed in a future version
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+(firefox:42204): GLib-GIO-WARNING **: 23:56:34.923: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+
+(/usr/lib/firefox/firefox:42324): Gtk-WARNING **: 23:56:34.923: Theme parsing error: gtk.css:68:35: The style property GtkButton:child-displacement-x is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:42324): Gtk-WARNING **: 23:56:34.924: Theme parsing error: gtk.css:69:35: The style property GtkButton:child-displacement-y is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:42324): Gtk-WARNING **: 23:56:34.924: Theme parsing error: gtk.css:71:36: The style property GtkCheckMenuItem:indicator-size is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(/usr/lib/firefox/firefox:42324): Gtk-WARNING **: 23:56:34.924: Theme parsing error: gtk.css:76:30: The style property GtkExpander:expander-size is deprecated and shouldn't be used anymore. It will be removed in a future version
+1607538396112	Marionette	INFO	Listening on port 34637
+
+(/usr/lib/firefox/firefox:42425): Gtk-WARNING **: 23:56:36.156: Theme parsing error: gtk.css:2:33: Failed to import: Error opening file /home/vagrantcoder/.config/gtk-3.0/window_decorations.css: No such file or directory
+1607538396200	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+1607538424688	Marionette	INFO	Stopped listening on port 34637
