@@ -6,7 +6,7 @@
 <div class="container bg-custom padding-custom">
 
     <hr>
-    <form class="form-horizontal" action="/" method="POST" autocomplete="on">
+    <form class="form-horizontal" action="/profile" method="POST" autocomplete="on">
         <div class="level">
             <h1 class="title level-left">
                 Welcome, {{ name }}!
@@ -35,8 +35,8 @@
         </div>
 
         <hr>
-        <a href="{{ url_for('main.result') }}"><button type="submit" class="btn btn-primary level-left"
-                value="Submit">Submit</button></a>
+        <button type="submit" class="btn btn-primary level-left"
+                value="Submit">Submit</button>
     </form>
 </div>
 
