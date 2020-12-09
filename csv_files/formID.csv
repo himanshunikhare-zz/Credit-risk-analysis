@@ -22,7 +22,7 @@ Phone,FLAG_PHONE-1,radio,updated
 Email Provided,FLAG_EMAIL-1,radio,updated
 Occupation Type,OCCUPATION_TYPE,dropdown,Core staff
 Rating Client,REGION_RATING_CLIENT,dropdown,3
-Weekday Process Started,WEEKDAY_APPR_PROCESS_START,dropdown,Tuesday
+Weekday Process Started,WEEKDAY_APPR_PROCESS_START,dropdown,TUESDAY
 Hour Process Started,HOUR_APPR_PROCESS_START,textbox,updated
 Region Living,REG_REGION_NoT_LIVE_REGION-1,radio,updated
 REG_REGION_NoT_WORK_REGION,REG_REGION_NoT_WORK_REGION-1,radio,updated
