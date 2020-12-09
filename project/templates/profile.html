@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="container bg-custom padding-custom">
+
+    <hr>
+    <form class="form-horizontal" action="/" method="POST" autocomplete="on">
+        <div class="level">
+            <h1 class="title level-left">
+                Welcome, {{ name }}!
+            </h1>
+            <button type="reset" class="btn btn-light level-right">Reset</button>
+
+        </div>
+        <hr>
+        <div class="container">
+            {% for i in form %}
+            <div class="is-6 ">
+                <div class="col-sm-6 p-2 text-left">
+                    <div class="form-group">
+                        <h1 class="subtitle">{{ i.label }}</h1>
+                        <h2 class="has-text-weight-light">
+                            {{ i }}
+                        </h2>
+                    </div>
+                    <br>
+
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </div>
+
+        <hr>
+        <a href="{{ url_for('main.result') }}"><button type="submit" class="btn btn-primary level-left"
+                value="Submit">Submit</button></a>
+    </form>
+</div>
+
+{% endblock %}

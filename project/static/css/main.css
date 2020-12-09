@@ -1,0 +1,15 @@
+hr{
+  background-color: gray;
+}
+
+.bg-custom{
+  background-color: rgb(250, 250, 250) !important;
+  padding-left: 40px;
+}
+
+.padding-custom{
+  padding:60px;
+}
+.custom-hr{
+  background-color: lavender;
+}
