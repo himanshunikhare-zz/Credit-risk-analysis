@@ -40,31 +40,31 @@
         </div>
         <div id="navbarMenuHeroA" class="navbar-menu">
             <div class="navbar-end">
-                <a id="indexNav" href="{{ url_for('main.index') }}" class="navbar-item">
+                <a href="{{ url_for('main.index') }}" class="navbar-item">
                     Home
                 </a>
                 {% if current_user.is_authenticated %}
-                <a id="profileNav" href="{{ url_for('main.profile') }}" class="navbar-item">
+                <a href="{{ url_for('main.profile') }}" class="navbar-item">
                     Profile
                 </a>
                 {% endif %}
                 {% if not current_user.is_authenticated %}
-                <a id="loginNav" href="{{ url_for('auth.login') }}" class="navbar-item">
+                <a href="{{ url_for('auth.login') }}" class="navbar-item">
                     Login
                 </a>
-                <a id="signupNav" href="{{ url_for('auth.signup') }}" class="navbar-item">
+                <a href="{{ url_for('auth.signup') }}" class="navbar-item">
                     Sign Up
                 </a>
                 {% endif %}
                 {% if current_user.is_authenticated %}
-                <a id="logoutNav" href="{{ url_for('auth.logout') }}" class="navbar-item">
+                <a href="{{ url_for('auth.logout') }}" class="navbar-item">
                     Logout
                 </a>
                 {% endif %}
             </div>
         </div>
     </nav>
-    <section class="hero is-light is-fullheight BlackMe">
+    <section class="hero is-light is-fullheight">
 
         <div class="hero-body">
             <div class="container has-text-centered">

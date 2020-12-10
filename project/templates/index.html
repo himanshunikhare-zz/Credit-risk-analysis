@@ -1,35 +1,13 @@
-{% extends "base2.html" %}
+{% extends "base.html" %}
 
 {% block content %}
-  <div class="flex-container">
-    <div class="is-align-content-center	">
-      <img src="../static/css/background.png" width="50%" alt="" srcset="">
-    </div>
-
-    <div style="color:black;" class="is-align-content-center	">
-      <h2 class="title">
-        Credit Risk Analysis
-      </h2>
-      <h3 class="subtitle">
-        Capstone Project 2
-      </h3>
-      <a id="loginButton" href="{{ url_for('auth.login') }}" class="button is-6 is-large">
-        Login
-      </a>
-    </div>
-
-  </div>
-  
-<hr>
-<section>
-    <h2 class='subtitle'>Credit risk modelling for unbanked sector
-    </h2>
-    <ul>
-      <li>Credit risk modeling helps lenders to determine the level of credit risk associated with extending credit to a borrower
-      <li>It also ensures that clients capable of repayment are not rejected
-      <li>What all parameters are really important in order to decide the frauders?
-      <li>Understand past histories and how the borrower has defrauded without considering the previous bank details
-    </ul>
-</section>
-
+<h1 class="title">
+  Credit risk analysis
+</h1>
+<h2 class="subtitle">
+    some text and little formatting, and ummah :)
+</h2>
+<a href="{{ url_for('auth.login') }}" class="button is-6 is-large">
+    Login
+</a>
 {% endblock %}
