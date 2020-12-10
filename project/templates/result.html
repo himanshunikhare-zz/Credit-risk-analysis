@@ -1,1 +1,25 @@
-<h1>Result</h1>
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="container bg-custom padding-custom">
+    <hr>
+    {% if score == 1 %}
+        <h1 class="title level-left">
+            Congrats {{ name }},
+        </h1>
+        <br>
+        <h2 class="subtitle level-left">You are eligible for the loan as per our model</h4>
+        <hr>
+    {% else %}
+        <h1 class="title level-left">
+            We are sorry {{ name }},
+        </h1>
+        <br>
+        <h2 class="subtitle level-left">You are not eligible for the loan as per our model</h4>
+        <hr>
+    {% endif %}
+</div>
+
+{% endblock %}

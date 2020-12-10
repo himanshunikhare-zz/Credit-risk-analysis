@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, redirect, url_for, request, flash
 from flask_login import login_required, current_user
 from . import db
-
+import random
 from project import forms
 from flask_sqlalchemy import SQLAlchemy
 
@@ -34,4 +34,4 @@ def profile_post():
 @main.route('/result')
 @login_required
 def result():
-    return render_template('result.html')
+    return render_template('result.html', score=random.randint(0,2), name=current_user.name)

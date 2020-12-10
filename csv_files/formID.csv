@@ -1,6 +1,6 @@
 labelName,id,type,value
-Name,NAME_CONTRACT_TYPE-1,radio,updated
-Gender,CODE_GENDER-1,radio,updated
+Name,NAME_CONTRACT_TYPE-1,radio,Jatin JJ
+Gender,CODE_GENDER-1,radio,Female
 Realty,FLAG_OWN_REALTY-1,radio,updated
 Children Count,CNT_CHILDREN,dropdown,2
 Income total,AMT_INCOME_TOTAL,textbox,updated

@@ -13,3 +13,11 @@ hr{
 .custom-hr{
   background-color: lavender;
 }
+
+.BlackMe{
+  background: linear-gradient(to bottom, #ffffff 49%, #f6f4d5 100%)!important;
+}
+
+.bg-image{
+  background-image: url(./background.svg) !important;
+}
