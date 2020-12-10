@@ -1,41 +1,35 @@
-{% extends "base.html" %}
+{% extends "base2.html" %}
 
 {% block content %}
-<section class="hero">
-  <div class="hero-body">
-    <img src="../static/css/background.svg" alt="" srcset="">
+  <div class="flex-container">
+    <div style="vertical-align: middle; align-content:flex-start;  width:50% ">
+      <img src="../static/css/background.png" alt="" srcset="">
+    </div>
 
-    <div class="container">
-      <h1 class="title">
+    <div style="align-content:flex-end; color:black; width:40%; height:100px ">
+      <h2 class="title">
         Credit Risk Analysis
-      </h1>
-      <h2 class="subtitle">
-        Capstone Project 2
       </h2>
+      <h3 class="subtitle">
+        Capstone Project 2
+      </h3>
       <a id="loginButton" href="{{ url_for('auth.login') }}" class="button is-6 is-large">
         Login
       </a>
     </div>
+
   </div>
-</section>
-
-
+  
 <hr>
 <section class="is-left">
-<h2 class='subtitle'>Credit risk modelling for unbanked sector
-</h2>
-<ul>
-  <li>Credit risk modeling helps lenders to determine the level of credit risk associated with extending credit to a borrower
-  </li>
-  <li>It also ensures that clients capable of repayment are not rejected
-  </li>
-  <li>What all parameters are really important in order to decide the frauders?
-  </li>
-  <li>Understand past histories and how the borrower has defrauded without considering the previous 
-    bank details
-    </li>
-</ul>
-
+    <h2 class='subtitle'>Credit risk modelling for unbanked sector
+    </h2>
+    <ul>
+      <li>Credit risk modeling helps lenders to determine the level of credit risk associated with extending credit to a borrower
+      <li>It also ensures that clients capable of repayment are not rejected
+      <li>What all parameters are really important in order to decide the frauders?
+      <li>Understand past histories and how the borrower has defrauded without considering the previous bank details
+    </ul>
 </section>
 
 {% endblock %}
