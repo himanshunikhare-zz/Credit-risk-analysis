@@ -13,3 +13,52 @@ hr{
 .custom-hr{
   background-color: lavender;
 }
+
+.BlackMe{
+  background: linear-gradient(to bottom, #ffffff 49%, #f6f4d5 100%)!important;
+}
+
+.bg-image{
+  background-image: url(./background.svg) !important;
+}
+
+* {
+  -webkit-transition-property: all;
+  -webkit-transition-duration: .2s;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+  -moz-transition-property: all;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+}
+
+body{
+  background: rgb(10, 24, 19) !important; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #185a9d, #43cea2)!important; /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #185a9d, #43cea2)!important;
+padding:20px;
+text-align:center;
+font-family: 'Oswald', sans-serif;
+}
+
+h1{
+  color:#c0c0c0;
+  font-size:79px;
+  padding-bottom:20px;
+  }
+
+.btn{
+color:white;
+background:rgba(0, 0, 0, 0.5);
+padding:10px 20px;
+font-size:12px;
+text-decoration:none;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+.btn:hover{
+border:none;
+background:rgba(36, 35, 35, 0.4);
+background:#fff;
+padding:20px 20px; 
+color:#1b1b1b;
+}
