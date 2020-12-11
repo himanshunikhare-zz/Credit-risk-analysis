@@ -9,17 +9,17 @@ import unittest
 class TestSelenium(unittest.TestCase): 
 	
     def setUp(self): 
-        self.data = pd.read_csv('../csv_files/formID.csv')
+        self.data = pd.read_csv('csv_files\\formID.csv')
         self.data = self.data.set_index("labelName").T
         self.usr = {
             'email': '111@gmail.com',
             'name' : '111',
             'password' : 'pass#123'
         }
-        self.driver = webdriver.Firefox(executable_path='./geckodriver')
+        self.driver = webdriver.Chrome()
 
     def test_all(self):
-        self.driver.get("http://0.0.0.0:5000/") 
+        self.driver.get("http://127.0.0.1:5000/") 
         # Login Button
         self.driver.implicitly_wait(5)
 
@@ -137,5 +137,4 @@ class TestSelenium(unittest.TestCase):
             print("tests ended")
             # self.driver.quit()
 
-if __name__ == '__main__': 
-	unittest.main() 
+
