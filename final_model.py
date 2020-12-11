@@ -77,6 +77,7 @@ for k in onehotencoder_dict.keys():
           dfHot = pd.DataFrame(z, columns = [k + str(int(i)) for i in range(z.shape[1])])
           # if 'level_0' in test.columns:
           #   test.drop('level_0',axis = 1)
+          print(test[k])
           test = test.reset_index(drop = True)
           test = pd.concat([test, dfHot], axis=1)
           test = test.drop(k,axis = 1)

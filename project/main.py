@@ -6,12 +6,14 @@ from project import forms
 from flask_sqlalchemy import SQLAlchemy
 from final_model import labelencoder_dict, onehotencoder_dict,data
 import pandas as pd
-import pandas as np
+import numpy as np
+import pickle
 
 main = Blueprint('main', __name__)
 def process(formData):
     print("DATA RECIEVED")
     test = pd.DataFrame([formData])
+    print(test)
     for i in labelencoder_dict.keys():
             lea = labelencoder_dict[i]
             
@@ -26,13 +28,12 @@ def process(formData):
     print("Label Encoder ",test.shape)
 
     for k in onehotencoder_dict.keys():
+
             print('-----------'+k+'-------------')
             ohe = onehotencoder_dict[k]
             # print(np.array(list(data[i].unique())).reshape(-1,1))
-            print("array", test[k])
+            print("array", test[k],ohe)
             z = ohe.transform(np.array(list(test[k])).reshape(-1,1)).toarray()
-
-            print('***test')
             dfHot = pd.DataFrame(z, columns = [k + str(int(i)) for i in range(z.shape[1])])
             print('***test')
             # if 'level_0' in test.columns:
