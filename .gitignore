@@ -138,4 +138,4 @@ dmypy.json
 cython_debug/
 
 # application_csv
-application_csv.csv
+application_train.csv
