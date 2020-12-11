@@ -1,5 +1,5 @@
 labelName,id,type,value
-Name,NAME_CONTRACT_TYPE-1,radio,updated
+Name,NAME_CONTRACT_TYPE-1,radio,Cash loans
 Gender,CODE_GENDER-1,radio,updated
 Realty,FLAG_OWN_REALTY-1,radio,updated
 Children Count,CNT_CHILDREN,dropdown,2

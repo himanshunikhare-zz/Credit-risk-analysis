@@ -10,24 +10,31 @@ import pandas as np
 
 main = Blueprint('main', __name__)
 def process(formData):
-    test = pd.DataFrame.from_dict(formData)
+    print("DATA RECIEVED")
+    test = pd.DataFrame([formData])
     for i in labelencoder_dict.keys():
             lea = labelencoder_dict[i]
+            
+            print("-------- "+i+"------------")
+            i=i.strip()
+            print('lea is',lea)
+            print(test[i])
             lea.fit(test[i])
-            print('----')
+            print('----------------------------')
             test[i] = lea.transform(test[i])
-
+    print("FINISHED LABEL ENCODER")
     print("Label Encoder ",test.shape)
 
     for k in onehotencoder_dict.keys():
-
-
-
-            print(k)
+            print('-----------'+k+'-------------')
             ohe = onehotencoder_dict[k]
             # print(np.array(list(data[i].unique())).reshape(-1,1))
+            print("array", test[k])
             z = ohe.transform(np.array(list(test[k])).reshape(-1,1)).toarray()
+
+            print('***test')
             dfHot = pd.DataFrame(z, columns = [k + str(int(i)) for i in range(z.shape[1])])
+            print('***test')
             # if 'level_0' in test.columns:
             #   test.drop('level_0',axis = 1)
             test = test.reset_index(drop = True)
@@ -55,6 +62,7 @@ def profile():
 @main.route('/profile', methods=["POST"])
 @login_required
 def profile_post():
+    print("__++_+_____+++____+_+_+_++++__")
     print("POST")
     form = forms.UserForm(request.form)
     print(form.errors)
