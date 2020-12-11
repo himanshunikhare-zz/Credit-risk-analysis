@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
+from final_model import loadModel
 
 
 # init SQLAlchemy so we can use it later in our models
@@ -8,7 +9,7 @@ db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
-
+    loadModel()
 
     app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
