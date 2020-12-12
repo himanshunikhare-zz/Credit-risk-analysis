@@ -13,6 +13,11 @@ pipeline {
 
             }
         } 
+        stage('Email Notification'){
+            steps{
+                emailext body: 'Well Done Ur Build Failed.', recipientProviders: [brokenBuildSuspects(), brokenTestsSuspects()], subject: 'Jenkins Job!', to: 'jainjatin4146@gmail.com'
+           
+        }
         stage('Building our image') { 
             steps { 
                 script { 
@@ -21,12 +26,7 @@ pipeline {
                 echo "Image Build"
             } 
         }
-        stage('Email Notification'){
-            steps{
-                mail bcc: '', body: 'Hello', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'jatink.jain@st.niituniversity.in'
-            }
-           
-        }
+        
         stage('Deploy our image') { 
             steps { 
                 script { 
