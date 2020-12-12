@@ -11,8 +11,8 @@ import time
 class TestSelenium(unittest.TestCase): 
 	
     def setUp(self): 
-        self.data = pd.read_csv('csv_files/formID1.csv')
-        self.data2 = pd.read_csv('csv_files/formID2.csv')
+        self.data = pd.read_csv('csv_files//formID1.csv')
+        self.data2 = pd.read_csv('csv_files//formID2.csv')
         self.data = self.data.set_index("labelName").T
         self.data2 = self.data2.set_index("labelName").T
         self.usr = {
@@ -20,7 +20,7 @@ class TestSelenium(unittest.TestCase):
             'name' : '111',
             'password' : 'pass#123'
         }
-        self.driver =webdriver.Firefox(executable_path='src/unittest/python/geckodriver') 
+        self.driver =webdriver.Chrome()
 
     def test_all(self):
         self.driver.get("http://127.0.0.1:5000/") 

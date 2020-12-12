@@ -9,7 +9,7 @@ Type Suite,NAME_TYPE_SUITE,dropdown,Unaccompanied,Family,Children,Other_A,nan,Ot
 Income Type,NAME_INCOME_TYPE,dropdown,Working,State servant,Commercial associate,Pensioner,Unemployed,Student,Businessman,Maternity leave,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Education Type,NAME_EDUCATION_TYPE,dropdown,Higher education,Incomplete higher,Lower secondary,Academic degree,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Family Status,NAME_FAMILY_STATUS,dropdown,Civil marriage,Widow,Separated,Unknown,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Housing Type,NAME_HOUSING_TYPE,dropdown,House,Rented apartment,With parents,Municipal apartment,Office apartment,Co-op apartment,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Housing Type,NAME_HOUSING_TYPE,dropdown,Rented apartment,With parents,Municipal apartment,Office apartment,Co-op apartment,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Region Population,REGION_POPULATION_RELATIVE,textbox,4000,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Days Birth,DAYS_BIRTH,textbox,4000,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Days Employed,DAYS_EMPLOYED,textbox,250,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
