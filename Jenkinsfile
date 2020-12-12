@@ -18,6 +18,7 @@ pipeline {
                 emailext body: 'Well Done Ur Build Failed.', recipientProviders: [brokenBuildSuspects(), brokenTestsSuspects()], subject: 'Jenkins Job!', to: 'jainjatin4146@gmail.com'
            
         }
+        }
         stage('Building our image') { 
             steps { 
                 script { 
