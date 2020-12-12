@@ -54,12 +54,13 @@ def process(formData):
 def index():
     return render_template('index.html')
 
+formData = {}
 @main.route('/profile')
 @login_required
 def profile():
     form = forms.UserForm(request.form)
     print(form.errors)
-    return render_template('profile.html',values=forms.data,form=form, name=current_user.name)
+    return render_template('profile.html',values=form.data,form=form, name=current_user.name)
 
 @main.route('/profile', methods=["POST"])
 @login_required
@@ -68,7 +69,25 @@ def profile_post():
     print("POST")
     form = forms.UserForm(request.form)
     print(form.errors)
-    formData = {}
+    
+    for i in request.form:
+        formData[i] = request.form[i]
+    print('Form data 1')
+    print(formData)
+    return redirect(url_for('main.profile2'))
+
+@main.route('/profile2')
+@login_required
+def profile2():
+    form2 = forms.UserForm2(request.form)
+    return render_template('profile2.html',values=form2.data,form=form2)
+
+@main.route('/profile2', methods=["POST"])
+@login_required
+def profile2_post():
+    print("__++_+_____+++____+_+_+_++++__")
+    print("POST")
+    form2 = forms.UserForm2(request.form)
     for i in request.form:
         formData[i] = request.form[i]
     print(formData)

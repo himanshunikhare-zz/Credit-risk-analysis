@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container bg-custom">
+    <hr><br>
+    <div class="level" style="padding: 10px;">
+        <h1 class="title level-left">
+            Please feel other miscellaneous details    
+        </h1>
+        <button type="reset" class="btn">Reset</button>
+    </div>
+    <hr>
+    <form class="form-inline has-text-left" action="/profile2" method="POST" autocomplete="on">
+        {%for i in form%}
+        {%if loop.index is odd%}
+        <div class="row">
+        {%endif%}
+            {%if loop.index is even%}
+                <div class="col-sm-6 ">
+                    <div class="form-group" style="text-align: left;padding-left: 200px;">
+                        <h2 class="subtitle">{{ i.label }}</h2>
+                        <h3 class="has-text-weight-light">
+                            {{ i }}
+                        </h3>
+                    </div>
+                </div>
+            {%else%}
+                <div class="col-sm-6">
+                    <div class="form-group" style="text-align: left;padding-left: 150px;">
+                        <h2 class="subtitle">{{ i.label }}</h2>
+                        <h3 class="has-text-weight-light">
+                            {{ i }}
+                        </h3>
+                    </div>
+                </div>
+            {%endif%}
+
+        {%if loop.index is even%}
+        </div>
+        <hr style="background-color: rgb(230, 230, 230); ">
+        <br>
+        {%endif %}
+       {%endfor%}
+        <br><br><br>
+        <br><br><br>
+        <br>
+        <hr>
+        <button id="submit-button" type="submit" class="btn btn-primary level-left" style="margin-left: 200px;" value="Submit">Submit</button>
+        <br><br>
+    </form>
+</div>
+
+
+{% endblock %}

@@ -3,10 +3,9 @@ import pandas as pd
 import numpy as np
 from wtforms import Form, TextField,RadioField,SelectField,validators
 from wtforms.fields.html5 import DecimalRangeField
-data=pd.read_csv("csv_files/createForm.csv")
-class UserForm(Form):
-    
 
+def createForm(data):
+    queryList = []
     for i in data:
         # print(data[i])
         var = i.split('/')
@@ -47,5 +46,19 @@ class UserForm(Form):
                 choiceStr +="('"+k+"','"+k+"')," 
             # print(choiceStr)
             formElement = 'SelectField("%s",validators=[validators.required()],choices=[%s])' %(var[0],choiceStr)
-            
-        exec("%s=%s" % (var[1],formElement))
+        queryList.append("%s=%s" % (var[1],formElement))
+        # exec("%s=%s" % (var[1],formElement))
+    return queryList
+
+class UserForm(Form):
+    data=pd.read_csv("csv_files/createForm1.csv")
+    queries = createForm(data)
+    for i in queries:
+        exec(i)
+
+class UserForm2(Form):
+    data=pd.read_csv("csv_files/createForm2.csv")
+    queries = createForm(data)
+    for i in queries:
+        exec(i)
+    
